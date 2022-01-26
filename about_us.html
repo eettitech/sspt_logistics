@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Mob-Friendly Web</title>
+    <title>SSPT LOGISTICS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/fav-ico.png" type="image/x-icon">
@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -52,7 +54,27 @@
             </form>
         </div>
     </nav>
-    <div class="container">
+    <div class="section-2 bg-light pt-4 pb-4 " data-aos="fade-up">
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-12 col-lg-5 col-md-5 col-sm-6 br-1">
+                    <div class="pl-4 pr-4">
+                        <h1 class="btitle mb-4">Who We Are</h1>
+                        <p class="h5 mb-4">M/s SSPT Logistics Private Limited is a Private Limited Company incorporated on 20.09.2018. The company is operating more than 150 branches across the country. All our trucks are fitted with Electronic Tracking Devices, to locate the consignments and the trucks, at your finger tips with a Smart Phone.</p>
+                        <hr class="mb-4">
+                        <!-- <div class="d-flex">
+                            <div class="btn text-white btn-circle mr-4"><i class="fa fa-plus fa-fw"></i> </div>
+                            <div class="h6"><strong> View more <br> about our services</strong></div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-12 col-lg-7 col-md-7 col-sm-6">
+                    <img src="img/carousel-img (3).jpg" width="100%" alt="Los Angeles">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" data-aos="fade-up">
         <section class="page-section" id="about">
             <div class="">
                 <div class="text-center">
@@ -64,18 +86,14 @@
                         <div class="timeline-image">
                             <h5 class="plcng">APRIL <br> 2002</h5>
                         </div>
-                        <div class="timeline-panel">    
+                        <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>2002-2013</h4>
                                 <h4 class="subheading">Our Humble Beginnings</h4>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted">•Sri Sendraya Perumal Transport was started.
-•Further extended the services to Rajasthan, Haryana, New Delhi, Uttar Pradesh, Uttaranchal,
-Punjab, Jammu & Kashmir
-•Started our FTL services Punjab, Jammu & Kashmir and reached to fleet size of 100 vehicles
-•
-Offered services to major clients like JSW Cements, TNPL, Hinduja Foundries, Kajaria Ceramics.</p>
+                                <p class="text-muted">•Sri Sendraya Perumal Transport was started. •Further extended the services to Rajasthan, Haryana, New Delhi, Uttar Pradesh, Uttaranchal, Punjab, Jammu & Kashmir •Started our FTL services Punjab, Jammu & Kashmir and reached
+                                    to fleet size of 100 vehicles • Offered services to major clients like JSW Cements, TNPL, Hinduja Foundries, Kajaria Ceramics.</p>
                             </div>
                         </div>
                     </li>
@@ -95,7 +113,7 @@ Offered services to major clients like JSW Cements, TNPL, Hinduja Foundries, Kaj
                     </li>
                     <li>
                         <div class="timeline-image">
-                            <h5 class="plcng">DECEMBER <br> 2015</h5>
+                            <h5 class="plcng">DEC <br> 2015</h5>
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -123,7 +141,7 @@ Offered services to major clients like JSW Cements, TNPL, Hinduja Foundries, Kaj
                     </li>
                     <li>
                         <div class="timeline-image">
-                            <h5 class="plcng">DECEMBER <br> 2017</h5>
+                            <h5 class="plcng">DEC <br> 2017</h5>
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -138,8 +156,7 @@ Offered services to major clients like JSW Cements, TNPL, Hinduja Foundries, Kaj
                     <li class="timeline-inverted">
                         <div class="timeline-image">
                             <h5 class="plcng">
-                                Be Part Of
-                                <br> Our Story!
+                                <span class="mb-hidden">Be Part Of <br></span> Our Story!
                             </h5>
                         </div>
                     </li>
@@ -147,7 +164,7 @@ Offered services to major clients like JSW Cements, TNPL, Hinduja Foundries, Kaj
             </div>
         </section>
     </div>
-    <footer style="margin-top: -50px;">
+    <footer data-aos="fade-up" style="margin-top: -50px;">
         <!-- Footer main -->
         <section class="ft-main">
             <div class="ft-main-item">
@@ -211,5 +228,8 @@ Offered services to major clients like JSW Cements, TNPL, Hinduja Foundries, Kaj
         </section>
     </footer>
 </body>
+<script>
+    AOS.init();
+</script>
 
 </html>
