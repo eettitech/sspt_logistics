@@ -77,7 +77,7 @@
                 <div class="bg-banner">
                 </div>
             </div>
-            <!-- C -->
+
             <div class="container cont-head">
                 <div class="text-center">
                     <div class="img-txt">
@@ -89,9 +89,11 @@
                             <!--end success_box -->
                             <!--begin newsletter-form -->
                             <form id="newsletter-form" class="newsletter_form" action="newsletter.php" method="post">
-                                <input id="email_newsletter" type="email" name="nf_email" placeholder="Enter Your Name">
-                                <input id="email_newsletter" type="email" name="nf_email" placeholder="Enter Your Email Id">
-                                <input id="email_newsletter" type="email" name="nf_email" placeholder="Enter Your Contact Number">
+                                <div class="row" > <div class="col-md-6"><input id="email_newsletter" type="email" name="nf_email" placeholder="Enter Your Name"></div>
+                                <div class="col-md-6"><input id="email_newsletter" type="email" name="nf_email" placeholder="Enter Your Email Id"></div>
+                                <div class="col-md-6"><input id="email_newsletter" type="email" name="nf_email" placeholder="Enter Your Contact Number"></div>
+                                </div>
+                        
                                 <input type="submit" value="FOR BOOKING!" id="submit-button-newsletter">
                             </form>
                             <!--end newsletter-form -->
@@ -266,8 +268,10 @@
             </div>
         </div>
     </div>
+
+
     <!--begin register -->
-    <section class="section-blue no-padding" id="register">
+    <section class="section-blue no-padding" id="register" data-aos="fade-up">
         
         <!--begin container-->
         <div class="container-fluid">
