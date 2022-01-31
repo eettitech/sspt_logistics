@@ -99,28 +99,39 @@
 
                     <!-- fieldsets -->
                     <fieldset>
-                        <h2 class="fs-title">Personal Details</h2>
-                        <h3 class="fs-subtitle">Tell us something more about you</h3>
-                        <input type="text" name="fname" placeholder="First Name" />
-                        <input type="text" name="lname" placeholder="Last Name" />
-                        <input type="text" name="phone" placeholder="Phone" />
+                        <h2 class="fs-title">General information</h2>
+                        <h3 class="fs-subtitle">Your email address will not be published. Required fields are marked *</h3>
+                        <!-- <input type="text" name="fname" placeholder="First Name" /> -->
+                        <input type="text" name="lname" placeholder="Name*" />
+                        <input type="text" name="phone" placeholder="Phone*" />
+                        <input type="text" name="email" placeholder="Email*" />
+                        <input type="text" name="companyname" placeholder="Comapny Name*" />
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
                     <fieldset>
-                        <h2 class="fs-title">Social Profiles</h2>
-                        <h3 class="fs-subtitle">Your presence on the social network</h3>
-                        <input type="text" name="twitter" placeholder="Twitter" />
-                        <input type="text" name="facebook" placeholder="Facebook" />
-                        <input type="text" name="gplus" placeholder="Google Plus" />
+                        <h2 class="fs-title">Please select a solution</h2>
+                        <h3 class="fs-subtitle">At least one field is required *</h3>
+                        <input type="checkbox" name="fname"/>
+                        <label style="word-wrap:break-word">LTL</label>
+                        <input type="checkbox" name="fname"/>
+                        <label style="word-wrap:break-word">FTL</label>
+                        <input type="checkbox" name="fname"/>
+                        <label style="word-wrap:break-word">Flatbed</label>
+                        <label style="word-wrap:break-word">Custom Brokerage</label>
+                        <input type="checkbox" name="fname"/>
+                        
+                        
+
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
                     <fieldset>
-                        <h2 class="fs-title">Create your account</h2>
-                        <h3 class="fs-subtitle">Fill in your credentials</h3>
-                        <input type="text" name="email" placeholder="Email" />
-                        <input type="password" name="pass" placeholder="Password" />
-                        <input type="password" name="cpass" placeholder="Confirm Password" />
+                        <h2 class="fs-title">Cargo information</h2>
+                        <h3 class="fs-subtitle">Your email address will not be published. Required fields are marked *</h3>
+                        <input type="text" name="origin" placeholder="Origin*" />
+                        <input type="text" name="destination" placeholder="Destination*" />
+                        <input type="text" name="specifics" placeholder="Specifics*" />
+                        <input type="text" name="additional_info" placeholder="Additional Info*" />
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                         <input type="submit" name="submit" class="submit action-button" value="Submit" />
                     </fieldset>
@@ -135,7 +146,7 @@
         <!-- Footer main -->
         <section class="ft-main">
             <div class="ft-main-item col-lg-4">
-                <img src="/img/sspt-logo.png" width="120px">
+                <img src="img/sspt-logo.png" width="120px">
                 <h2 class="btitle mt-3">SSPT LOGISTICS</h2>
                 <p>SSPT Logistics Private Limited is a Logistics Company, operating more than 150 branches of M/s SSPT Logistics across the country. All our trucks are fitted with Electronic Tracking Devices, to locate the consignments and the trucks, at
                     your finger tips to a Smart Phones.</p>
