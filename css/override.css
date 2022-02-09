@@ -1,10 +1,19 @@
+@font-face {
+    font-family: ballon;
+    src: url(../fonts/ballon.ttf);
+}
+
+.btitle {
+	font-family: 'Roboto', sans-serif !important;
+}
+
 .navbar {
 	z-index: 100;
-    position: fixed;
+	position: absolute;
     width: 100%;
 }
 .lite-black {
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.08);
 }
 .no-bb-1x {
 	border-bottom:  none !important;
@@ -24,4 +33,26 @@
 }
 .hidden {
 	display: none;
+}
+.fixed {
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+}
+.navbar.fixed {
+	background-color: #000;
+	color: #fff;
+}
+.dropdown-menu {
+	background-color: rgba(0, 0, 0, 0.5) !important;
+}
+.fixed .dropdown-menu {
+	background-color: #111 !important;
+}
+.js-popup-open, .js-popup-open:hover {
+	color: #fff;
+}
+.popup-body .button:hover {
+	border-bottom: none;
 }

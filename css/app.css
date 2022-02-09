@@ -749,7 +749,8 @@ footer {
 .contact-us {
     background: #f8f4e5;
     padding: 50px 100px;
-    border-top: 10px solid #f45702;
+    /*border-top: 10px solid #f45702;*/
+    border-top: 10px solid #0ebae6;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -778,7 +779,8 @@ footer {
 }
 
 .contact-us em {
-    color: #f45702;
+    /*color: #f45702;*/
+    color: #0ebae6;
     font-weight: bold;
 }
 
@@ -799,12 +801,15 @@ footer {
 
 button:hover {
     background: inherit;
-    color: #f45702;
-    border-bottom: 2px solid #f45702;
+    /*color: #f45702;*/
+    /*border-bottom: 2px solid #f45702;*/
+    color: #0ebae6;
+    border-bottom: 2px solid #0ebae6;
 }
 
  ::selection {
-    background: #ffc7b8;
+    /*background: #ffc7b8;*/
+    background: #acd4fa;
 }
 
 input:-webkit-autofill,
