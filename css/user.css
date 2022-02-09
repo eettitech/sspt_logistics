@@ -414,7 +414,7 @@ body.pop-up-open {
   top: 50%;
   left: 50%;
   margin-left: -10px;
-  margin-top: -9px;
+  margin-top: -8px;
   content: '';
   padding: 20px 10px;
   transition: all .2s linear;
@@ -750,7 +750,7 @@ body.pop-up-open {
   color: #222;
 }
 .user {
-  background: #C7C7C7;
+  background: #AAA2A2;
 }
 /*----------------------------------------------------------------------------------
 2.12. Media queries
@@ -1460,7 +1460,7 @@ body.pop-up-open {
     padding-top: 110px;
   }
   .top_panel.inversion .mobile_btn {
-    background: #c7c7c7;
+    background: #878787;
   }
   .top_panel.inversion .center .menu ul li a {
     color: #fff;
