@@ -20,6 +20,45 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
+    <style type="text/css">
+        .border-right {
+            border-right: 1px solid #bbb !important;
+        }
+
+        .search {
+          width: 100%;
+          position: relative;
+          display: flex;
+        }
+
+        .searchTerm {
+          width: 100%;
+          border: 3px solid #00B4CC;
+          border-right: none;
+          padding: 5px;
+          /*height: 20px;*/
+          border-radius: 5px 0 0 5px;
+          outline: none;
+          color: #9DBFAF;
+        }
+
+        .searchTerm:focus{
+          color: #00B4CC;
+        }
+
+        .searchButton {
+          width: 40px;
+          /*height: 36px;*/
+          border: 1px solid #00B4CC;
+          background: #00B4CC;
+          text-align: center;
+          color: #fff;
+          border-radius: 0 5px 5px 0;
+          cursor: pointer;
+          font-size: 20px;
+        }
+    </style>
+
 
 </head>
 
@@ -81,7 +120,7 @@
         </div>
     </section>
 
-    <div class="container mt-5">
+    <div class="container mt-5" style="display: none">
         <div class="row mb-5">
             <div class="col-12 col-lg-12 col-md-12 col-sm-12 mb-5">
                 <h2 class="btitle">TAMIL NADU</h2>
@@ -137,6 +176,28 @@
         </div>
     </div>
 
+    <div class="container mt-5">
+        <div class="row mb-5">
+            <div class="col-lg-8 col-md-8 col-sm-1 col-12 mt-1 mb-1">
+                <div class="border-right">
+                    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+
+                    <div align="center">
+                      <div id="visualization">   </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-1 col-12 mt-1 mb-1">
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                    <button type="submit" class="searchButton">
+                            <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <!-- Footer main -->
         <section class="ft-main">
@@ -181,6 +242,71 @@
             </ul>
         </section>
     </footer>
+    <script type="text/javascript">
+        google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+function drawVisualization() {
+    var data = google.visualization.arrayToDataTable([
+        ['State Code', 'State', 'Hub & Spoke'],     
+        ['IN-UP','Uttar Pradesh', 8],
+        ['IN-MH','Maharashtra', 23],
+        ['IN-BR','Bihar', 0],
+        ['IN-WB','West Bengal', 0],
+        ['IN-MP','Madhya Pradesh', 0],
+        ['IN-TN','Tamil Nadu', 107],
+        ['IN-RJ','Rajasthan', 8],
+        ['IN-KA','Karnataka', 30],
+        ['IN-GJ','Gujarat', 14],
+        ['IN-AP','Andhra Pradesh', 17],
+        ['IN-OR','Orissa', 0],
+        ['IN-TG','Telangana', 23],
+        ['IN-KL','Kerala', 41],
+        ['IN-JH','Jharkhand', 0],
+        ['IN-AS','Assam', 0],
+        ['IN-PB','Punjab', 11],
+        ['IN-CT','Chhattisgarh', 0],
+        ['IN-HR','Haryana', 11],
+        ['IN-JK','Jammu and Kashmir', 0],
+        ['IN-UT','Uttaranchal', 3],
+        ['IN-HP','Himachal Pradesh', 0],
+        ['IN-TR','Tripura', 0],
+        ['IN-ML','Meghalaya', 0],
+        ['IN-MN','Manipur', 0],
+        ['IN-NL','Nagaland', 0],
+        ['IN-GA','Goa', 0],
+        ['IN-AR', 'Arunachal Pradesh', 0],
+        ['IN-MZ','Mizoram', 0],
+        ['IN-SK','Sikkim', 0],
+        ['IN-DL','Delhi', 21],
+        ['IN-PY','Puducherry', 0],
+        ['IN-CH','Chandigarh', 0],
+        ['IN-AN','Andaman and Nicobar Islands', 0],
+        ['IN-DN','Dadra and Nagar Haveli', 0],
+        ['IN-DD','Daman and Diu', 0],
+        ['IN-LD','Lakshadweep', 0]
+      ]);
+
+    // colorAxis: {colors: ['#e5ef88', '#d4b114', '#e85a03']},
+    var opts = {
+        region: 'IN',
+        domain:'IN',
+        displayMode: 'regions',
+        colorAxis: {colors: ['#88affc', '#407df5', '#2468ed']},
+        resolution: 'provinces',
+        /*backgroundColor: '#81d4fa',*/
+        /*datalessRegionColor: '#81d4fa',*/
+        defaultColor: '#f5f5f5',
+        legend: 'none',
+        width: 640, 
+        height: 480
+      };
+      var geochart = new google.visualization.GeoChart(
+          document.getElementById('visualization'));
+      geochart.draw(data, opts);
+    };
+
+    </script>
 </body>
 
 </html>
