@@ -19,6 +19,54 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <style type="text/css">
+        .s3, .s5, .s7 {
+            display: inline-block !important;
+        }
+        .s5 {
+            width: 49% !important;
+        }
+        .s3 {
+            width: 29% !important;
+        }
+        .s7 {
+            width: 69% !important;
+        }
+        .cr-section {
+            max-width: 85%;
+            margin: auto;
+            text-align: justify;
+        }
+        .cr-section > div {
+            margin-top: 10px;
+        }
+        .cr-radio {
+            width: 10px !important;
+        }
+        .cr-weight, .cr-type {
+            width: 370px !important;
+        }
+        .cr-length, .cr-breath, .cr-height {
+            width: 120px !important;
+        }
+        #multiform-step {
+            min-height: 550px;
+        }
+        @media screen and (max-width: 640px) {
+            #multiform-step {
+                min-height: 700px;
+            }
+            .cr-section {
+                max-width: 100%;
+            }
+            .cr-weight, .cr-type, .cr-dim > input {
+                width: 180px !important;
+            }
+            .m-s10 {
+                width: 98% !important;
+            }
+        }
+    </style>
 
 
 </head>
@@ -80,66 +128,104 @@
             </h1>
         </div>
     </section>
-    <!-- MultiStep Form -->
-    <div class="container clearfix mb-5">
-        <div class="row">
-            <div class="col-md-12 mt-5">
-                <form id="msform">
-                    <!-- <section class="banner"> -->
-                    <!-- <h1 class="text-dark pt-5">
-                            <Strong>STEP 1/3</Strong>
-                            <ul id="progressbar">
-                                <li class="active">Personal Details</li>
-                                <li>Social Profiles</li>
-                                <li>Account Setup</li>
-                            </ul>
-                        </h1> -->
-                    <!-- </section> -->
-                    <!-- progressbar -->
+    <section id="multiform-step">
+        <!-- MultiStep Form -->
+        <div class="container clearfix mb-5">
+            <div class="row">
+                <div class="col-md-12 mt-5">
+                    <form id="msform">
+                        <!-- <section class="banner"> -->
+                        <!-- <h1 class="text-dark pt-5">
+                                <Strong>STEP 1/3</Strong>
+                                <ul id="progressbar">
+                                    <li class="active">Personal Details</li>
+                                    <li>Social Profiles</li>
+                                    <li>Account Setup</li>
+                                </ul>
+                            </h1> -->
+                        <!-- </section> -->
+                        <!-- progressbar -->
 
-                    <!-- fieldsets -->
-                    <fieldset>
-                        <h2 class="fs-title">General information</h2>
-                        <h3 class="fs-subtitle">Your email address will not be published. Required fields are marked *</h3>
-                        <!-- <input type="text" name="fname" placeholder="First Name" /> -->
-                        <input type="text" name="lname" placeholder="Name*" />
-                        <input type="text" name="phone" placeholder="Phone*" />
-                        <input type="text" name="email" placeholder="Email*" />
-                        <input type="text" name="companyname" placeholder="Comapny Name*" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
-                    </fieldset>
-                    <fieldset>
-                        <h2 class="fs-title">Please select a solution</h2>
-                        <h3 class="fs-subtitle">At least one field is required *</h3>
-                        <input type="checkbox" name="fname"/>
-                        <label style="word-wrap:break-word">LTL</label>
-                        <input type="checkbox" name="fname"/>
-                        <label style="word-wrap:break-word">FTL</label>
-                        <input type="checkbox" name="fname"/>
-                        <label style="word-wrap:break-word">Flatbed</label>
-                        <label style="word-wrap:break-word">Custom Brokerage</label>
-                        <input type="checkbox" name="fname"/>
-                        
-                        
+                        <!-- fieldsets -->
+                        <fieldset>
+                            <h2 class="fs-title">General information</h2>
+                            <h3 class="fs-subtitle">Your email address will not be published. Required fields are marked *</h3>
+                            <!-- <input type="text" name="fname" placeholder="First Name" /> -->
+                            <input type="text" name="lname" placeholder="Name*" />
+                            <input type="text" name="phone" placeholder="Phone*" />
+                            <input type="text" name="email" placeholder="Email*" />
+                            <input type="text" name="companyname" placeholder="Comapny Name*" />
+                            <input type="button" name="next" class="next action-button" value="Next" />
+                        </fieldset>
+                        <fieldset>
+                            <h2 class="fs-title">Please select a solution</h2>
+                            <h3 class="fs-subtitle">At least one field is required *</h3>
+                            <div class="cr-section">
+                                <div>
+                                    <div class="s5 m-s10">
+                                        <label>
+                                            <input type="radio" name="fname" class="cr-radio"/> Less-than-truckload
+                                        </label>
+                                    </div>
+                                    <div class="s5 m-s10">
+                                        <label>
+                                            <input type="radio" name="fname" class="cr-radio"/> Full-truckload
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="s3 m-s10">
+                                        Cargo Dimension
+                                    </div>
+                                    <div class="s7 m-s10 cr-dim">
+                                        <input type="text" name="cr-length" placeholder="Length" class="cr-length" style="padding: 15px 10px;">
+                                        <input type="text" name="cr-breath" placeholder="Breadth" class="cr-breath" style="padding: 15px 10px;"> 
+                                        <input type="text" name="cr-height" placeholder="Height" class="cr-height" style="padding: 15px 10px;">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="s3 m-s10">Weight</div>
+                                    <div class="s7 m-s10"><input type="text" name="cr-weight" placeholder="Weight" class="cr-weight"></div>
+                                </div>
+                                <div>
+                                    <div class="s3 m-s10">Type of cargo</div>
+                                    <div class="s7 m-s10">
+                                        <select class="cr-type">
+                                            <option value="a">Food Stuff</option>
+                                            <option value="b">Livestock and Animals</option>
+                                            <option value="c">Gas-Based Fuels</option>
+                                            <option value="d">Vehicles</option>
+                                            <option value="e">Factory Parts</option>
+                                            <option value="f">Dry Bulk Cargo</option>
+                                            <option value="g">Liquid Bulk Cargo</option>
+                                            <option value="h">Chemical</option>
+                                            <option value="i">Toxic Products</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
 
-                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
-                    </fieldset>
-                    <fieldset>
-                        <h2 class="fs-title">Cargo information</h2>
-                        <h3 class="fs-subtitle">Your email address will not be published. Required fields are marked *</h3>
-                        <input type="text" name="origin" placeholder="Origin*" />
-                        <input type="text" name="destination" placeholder="Destination*" />
-                        <input type="text" name="specifics" placeholder="Specifics*" />
-                        <input type="text" name="additional_info" placeholder="Additional Info*" />
-                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="submit" name="submit" class="submit action-button" value="Submit" />
-                    </fieldset>
-                </form>
+                            <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                            <input type="button" name="next" class="next action-button" value="Next" />
+                        </fieldset>
+                        <fieldset>
+                            <h2 class="fs-title">Cargo information</h2>
+                            <h3 class="fs-subtitle">Your email address will not be published. Required fields are marked *</h3>
+                            <input type="text" name="origin" placeholder="Origin*" />
+                            <input type="text" name="destination" placeholder="Destination*" />
+                            <input type="text" name="specifics" placeholder="Specifics*" />
+                            <input type="text" name="additional_info" placeholder="Additional Info*" />
+                            <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                            <input type="submit" name="submit" class="submit action-button" value="Submit" />
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- /.MultiStep Form -->
+        <!-- /.MultiStep Form -->
+    </section>
 
 
     <footer>
