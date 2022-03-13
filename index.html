@@ -129,13 +129,13 @@
                             <form id="newsletter-form" class="newsletter_form" action="newsletter.php" method="post">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <input class="full-width" id="email_newsletter" type="email" name="nf_email" placeholder="Enter Your Name">
+                                        <input class="input-st full-width" type="text" name="nf_name" placeholder="Enter Your Name" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <input class="full-width" id="email_newsletter" type="email" name="nf_email" placeholder="Enter Your Email Id">
+                                        <input class="input-st full-width" type="email" name="nf_email" placeholder="Enter Your Email Id" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <input class="full-width" id="email_newsletter" type="email" name="nf_email" placeholder="Enter Your Contact Number">
+                                        <input class="input-st full-width" type="tel" name="nf_phone" pattern="[0-9]{10}" placeholder="Enter Your 10 Digit Phone Number" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <input class="full-width" type="submit" value="FOR ENQUIRY!" id="submit-button-newsletter">
@@ -504,17 +504,17 @@
                 <img src="img/bg3.jpg" class="img-fluid" style="margin-left: -15px; width: 100%; height: 700px;">
             </div>
             <div class="col-12 col-lg-6 col-md-6 col-sm-6">
-                <form id="msform">
+                <form id="msform" method="post" action="https://formsubmit.co/">
                     <fieldset>
                         <h3 class="fs-title">For Any Enquiry</h3>
                         <h5 class="fs-subtitle">Please fill the details for further enquiries.</h5>
                         <input type="text" name="fname" placeholder="Full Name" />
                         <!-- <input type="text" name="lname" placeholder="Last Name" /> -->
-                        <input type="text" name="phone" placeholder="Phone Number" />
-                        <input type="email" name="phone" placeholder="Email" />
-                        <input type="text" name="fname" placeholder="Ticket Type" />
-                        <input type="text" name="lname" placeholder="Booking Number" />
-                        <textarea class="form-control" rows="3" id="comment" placeholder="Description"></textarea>
+                        <input type="tel" pattern="[0-9]{10}" name="fphone" placeholder="Phone Number" />
+                        <input type="email" name="femail" placeholder="Email" />
+                        <input type="text" name="fticket" placeholder="Ticket Type" />
+                        <input type="text" name="fbooking" placeholder="Booking Number" />
+                        <textarea class="form-control" rows="3" id="comment" name="fdesc" placeholder="Description"></textarea>
                         <input type="submit" name="submit" class="submit action-button" value="Submit" />
                     </fieldset>
                 </form>
@@ -787,5 +787,20 @@
 <script src="js/slick.min.js"></script>
 <script src="js/hammer.js"></script>
 <script src="js/scripts.js"></script>
+<script type="text/javascript">
+    $("#newsletter-form").on("submit", function(){
+        msform = $("#msform");
+        msform.find("input[name='fname']").val($("#newsletter-form").find("input[name='nf_name']").val());
+        msform.find("input[name='femail']").val($("#newsletter-form").find("input[name='nf_email']").val());
+        msform.find("input[name='fphone']").val($("#newsletter-form").find("input[name='nf_phone']").val());
+        $('html, body').animate({
+            scrollTop: $("#register").offset().top - 100
+        }, 1000);
+        return false;
+    });
+    $("#msform").on("submit", function(){
+        $(this).attr("action", $(this).attr("action")+$(this).find("input[name='femail']").val());
+    });
+</script>
 
 </html>
